@@ -1,0 +1,248 @@
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+}
+
+section#main {
+    display: grid;
+    grid-template-rows: 0.25fr 2fr;
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width:  auto;
+}
+
+header > div {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    text-align: center;
+    font-style: italic;
+    color: gold;
+}
+
+span {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-align: center;
+    font-style: italic;
+    color: gold;
+    width: 100%;
+    margin: 5px auto;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-style: italic;
+    color: gold;
+}
+
+section.game-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 100%;
+}
+
+main > .slot-machine {
+    display: grid;
+    grid-template-rows: 0.5fr 2fr 1.8fr;
+    height: 100%;
+    width:100%;
+}
+
+.top {
+    display: inline-block;
+    margin: 0 auto;
+    padding-top: 30px;
+    height: 100px;
+    width: 55%;
+    border: 2px solid black;
+    border-radius: 3px;
+    text-align: center;
+    background-color: #32557f;
+}
+
+.middle {
+    display: block;
+    margin: 0 auto;
+    border-bottom: 444px solid #32557f;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 50%;
+}
+
+.mid-middle {
+    margin: 5px auto;
+    border: 1px solid black;
+    height: 432px;
+    background-color: #1B7DAF;
+    width: 90%;
+}
+
+.display {
+    margin: 5px auto;
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 100px;
+    background-color: white;
+    width: 90%;
+    position: relative;
+    top: 100px;
+}
+
+.display-screen {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 5px auto;
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 70%;
+    background-color: white;
+    width: 90%;
+    position: relative;
+    top: 10px;
+}
+
+.display-screen-1 {
+    margin: 6px auto;
+    margin-right: 0;
+    height: 80%;
+    border: 0.5px solid black;
+    width: 95%;
+}
+.display-screen-2 {
+    margin: 6px auto;
+    margin-right: 0;
+    margin-left: 1px;
+    height: 80%;
+    border: 0.5px solid black;
+    width: 95%;
+}
+.display-screen-3 {
+    margin: 6px auto;
+    margin-right: 0;
+    margin-left: 1px;
+    height: 80%;
+    border: 0.5px solid black;
+    width: 95%;
+}
+
+
+#screen-1 {
+    margin: 10px auto;
+    text-align: center;
+    height: 60%;
+    width: 80%;
+}
+
+#screen-2 {
+    margin: 10px auto;
+    text-align: center;
+    height: 60%;
+    width: 80%;
+}
+
+#screen-3 {
+    margin: 10px auto;
+    text-align: center;
+    height: 60%;
+    width: 80%;
+}
+
+.bottom {
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+
+}
+
+.bottom-top {
+    margin: 0 auto;
+    height: 100%;
+    width: 57%;
+    border: 0.5px solid black;
+    background-color: #1B7DAF;
+
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+aside > .left {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: lightslategray;
+    width: 35%;
+    height: 10%;
+}
+
+#score {
+    margin: 2px;
+}
+
+#cash {
+    margin: 2px;
+}
+
+#game-bet {
+    margin: 2px;
+}
+.bet{
+    width: 50px;
+    margin: 10px 5px;
+}
+
+#bet5 {
+    width: 50px;
+    margin: 10px auto;
+}
+
+#bet10 {
+    width: 50px;
+    margin: 10px auto;
+}
+
+#spin {
+    width: 50px;
+    margin: 10px auto;
+}
+
+#game-score, #game-cash, #gameBet {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center;
+    font-style: normal;
+    color: black;
+}
+
+.bottom-bottom {
+    margin: 1px auto;
+    height: 20%;
+    width: 50%;
+    border: 0.5px solid black;
+    background-color: #32557f;
+}

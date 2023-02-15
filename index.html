@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" height="1000" width="1080">
+    <title>Slot Machine</title>
+    <style>
+        body{
+            background-image: url("img/slot-machine-background-sample-2-unsplash.jpg");
+        }
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    
+    <section id="main">
+        <header>
+            <div>Welcome to Jackpot City Casino</div>
+        </header>
+        <section class="game-section">
+
+            <aside>
+                <div class="left">
+                    <div id="score">
+                        SCORE:<span id="game-score"></span>
+                    </div>
+                    <div id="cash">
+                        CASH: $<span id="game-cash"></span>
+                    </div>
+                    <div id="game-bet">
+                        BET: $<span id="gameBet"></span>
+                    </div>
+                </div>
+            </aside>
+
+            <main>
+                <div class="slot-machine">
+
+                    <div class="top"><span>JACKPOT SLOT MACHINE</span>
+                        <h2></h2>
+                    </div>
+                    <div class="middle">
+                        <div class="mid-middle">
+
+                            <div class="display">
+                                <div class="display-screen">
+                                    <div class="display-screen-1">
+                                        <div id="screen-1"></div>
+                                    </div>
+                                    <div class="display-screen-2">
+                                        <div id="screen-2"></div>
+                                    </div>
+                                    <div class="display-screen-3">
+                                        <div id="screen-3"></div>
+                                    </div> 
+                                </div>
+                            </div>  
+                        </div>
+
+                    </div>
+                    <div class="bottom">
+                        <div class="bottom-top">
+                            <div class="buttons">
+                                <button id="bet5">BET $5</button>
+                                <button id="bet10">BET $10</button>
+                                <button id="spin">SPIN</button>
+                            </div>
+                        </div>
+                        <div class="bottom-bottom"></div>
+                    </div>
+
+                </div>
+            </main>
+
+            <aside class="right">
+                <div></div>
+            </aside>
+
+        </section>
+    </section>
+
+</body>
+</html>

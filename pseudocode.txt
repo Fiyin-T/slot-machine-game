@@ -1,0 +1,23 @@
+1. Define required game variables to track the state of the game.
+
+2. Upon loading the browser game the slot machine is initialized.
+    2.1 Initialize three random values.
+    2.2 Initialize the game state variables.
+    2.3 Update game values to slot machine display interface.
+    2.3 Render game state variables.
+    2.4 Render game message.
+        2.4.1 Prompt the player to place bets and spin.
+            2.4.1.1 If player clicks spin without betting, Prompt player to bet before spinning.
+        2.4.2 Prompt the player to click spin after placing bet.
+            2.4.2.1 If player clicks bet, bet value is incremented.
+            2.4.2.2 If the player clicks spin, generate three random values, game play.
+
+3. Handle game play after clicking the slot machine spin button.
+    3.1 Compare the three random values.
+        3.1.1 If all three values are equal to 7, Prompt game message "Jackpot! You're a Winner."
+        3.1.2 If all three values are equal, Prompt game message "Great! three out of three, Spin again."
+        3.2.3 If two values out of the three are equal, Prompt game message "Great! two out of three, Spin again."
+        3.2.4 If all three values are different, Prompt game message "Three different values."
+    3.2 Update state variables for score and bet after each comparison.
+    3.3 Update slot machine display interface.
+    3.4 Render game state for score, cash and bet.
