@@ -1,13 +1,4 @@
 // constants
-const display = [ 
-    {1: 'img/values/bell.jpeg'},
-    {2: 'img/values/lemon.jpeg'},
-    {3: 'img/values/orange.jpeg'},
-    {4: 'img/values/banana.jpeg'},
-    {5: 'img/values/cherries.jpeg'},
-    {6: 'img/values/water-melon.jpeg'},
-    {7: 'img/values/7.jpeg'}
-]
 
 
 // app's state (variables) 
@@ -48,6 +39,7 @@ function render() {
     if (!betSet || bet === 0 ) {
         gameMessage.textContent = "Place your bets and spin"
     } 
+
 }
 
 function playerSpin(evt) {
@@ -55,7 +47,7 @@ function playerSpin(evt) {
     if (clk.localName !== 'button') {
         return
     }
-    if (clk.id === 'bet') {
+    if (clk.id === 'bet5' || clk.id === 'bet10') {
         return
     } 
     if (!spinClicked) {
@@ -65,34 +57,42 @@ function playerSpin(evt) {
 }
 
 function gamePlay() {
-
-    if (value[0] ===  7 &&  value[1] ===  7 && value[2] === 7) {
-        cash = cash + (bet * 1000)
-        score = score + 10000
-        gameMessage.textContent = "Jackpot! You're a Winner"
-    } else if (value[0] ===  value[1] &&  value[1] ===  value[2]) {
-        cash = cash + (bet * 2)
-        score = score + 500
-        gameMessage.textContent = "Great! three out of three, Spin again."
-    } else if (value[0] === value[1] && value[1] !== value[2]) {
-        cash = cash + (bet * 1.5)
-        score = score + 200
-        gameMessage.textContent = "Great! two out of three, Spin again."
-    } else if (value[0] !== value[1] && value[1] === value[2]) {
-        cash = cash + (bet * 1.5)
-        score = score + 200
-        gameMessage.textContent = "Great! two out of three, Spin again."
-    } else if (value[0] !== value[1] && value[0] === value[2]) {
-        cash = cash + (bet * 1.5)
-        score = score + 200
-        gameMessage.textContent = "Great! two out of three, Spin again."
+    
+    // check for cash before game play
+    if (cash < 0) {
+        gameMessage.textContent = "Out of cash! Reload game"
+        spinClicked = false
+        return
     } else {
-        cash = cash - bet
-        score = score - 100
-        gameMessage.textContent = "Three different values"
+        if (value[0] ===  7 &&  value[1] ===  7 && value[2] === 7) {
+            cash = cash + (bet * 1000)
+            score = score + 10000
+            gameMessage.textContent = "Jackpot! You're a Winner"
+        } else if (value[0] ===  value[1] &&  value[1] ===  value[2]) {
+            cash = cash + (bet * 2)
+            score = score + 500
+            gameMessage.textContent = "Great! three out of three, Spin again."
+        } else if (value[0] === value[1] && value[1] !== value[2]) {
+            cash = cash + (bet * 1.5)
+            score = score + 200
+            gameMessage.textContent = "Great! two out of three, Spin again."
+        } else if (value[0] !== value[1] && value[1] === value[2]) {
+            cash = cash + (bet * 1.5)
+            score = score + 200
+            gameMessage.textContent = "Great! two out of three, Spin again."
+        } else if (value[0] !== value[1] && value[0] === value[2]) {
+            cash = cash + (bet * 1.5)
+            score = score + 200
+            gameMessage.textContent = "Great! two out of three, Spin again."
+        } else {
+            cash = cash - bet
+            score = score - 100
+            gameMessage.textContent = "Three different values"
+        }
+        spinClicked = false
+        updateDisplay()
     }
-    spinClicked = false
-    updateDisplay()
+
 }
 
 function playerBet5(event) {
