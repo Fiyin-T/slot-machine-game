@@ -10,7 +10,9 @@
             2.4.1.1 If player clicks spin without betting, Prompt player to "Bet before spinning."
         2.4.2 Prompt the player to "Click spin" after placing bet.
             2.4.2.1 If player clicks bet, bet value is incremented.
-            2.4.2.2 If the player clicks spin, generate three random values, game play.
+            2.4.2.2 If the player clicks spin, 
+                2.4.2.2.1 If bet placed is greater than cash, player loses. Prompt game message "Bet placed is above cash level, reload game"
+                2.4.2.2.2 If bet placed is not greater than cash generate three random values, game play.
 
 3. Handle game play after clicking the slot machine spin button.
     3.1 Check for available cash before game play.
