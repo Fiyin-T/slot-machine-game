@@ -50,6 +50,11 @@ function playerSpin(evt) {
     if (clk.id === 'bet5' || clk.id === 'bet10') {
         return
     } 
+    if (cash < bet) {
+        gameMessage.textContent = "Bet placed is above cash level, reload game"
+        spinClicked = false
+        return    
+    }
     if (!spinClicked) {
         spinClicked = true
         getValues()
@@ -165,7 +170,7 @@ function initialize() {
     if (value[0] ===  value[1] &&  value[0] ===  value[2]) {
         initialize()
     } else {
-        score = 0
+        score = 1000
         cash = 200
         bet = 0
         betSet = false
