@@ -29,7 +29,7 @@ For the best game experience, it is advisable to play the game on a laptop or de
 
 #### Getting Started: The link to the browser game can be found below
 
-- [Slot Machine Game]()
+- [Slot Machine Game](https://fiyin-t.github.io/slot-machine-game/)
 
 ### Next Steps: Future enhancement of the game includes:
 

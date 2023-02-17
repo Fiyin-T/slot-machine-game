@@ -109,7 +109,7 @@ function playerBet5(event) {
     } else {
         bet = bet + 5
     }
-    cash = (cash -  bet)
+    cash = (cash -  5)
     gameMessage.textContent = "Click Spin"
     updateDisplay()
 }
@@ -128,7 +128,7 @@ function playerBet10(e) {
     } else {
         bet = bet + 10
     }
-    cash = (cash -  bet)
+    cash = (cash -  10)
     gameMessage.textContent = "Click Spin"
     updateDisplay()
 }
